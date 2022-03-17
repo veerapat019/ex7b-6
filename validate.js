@@ -17,15 +17,16 @@ function checkSID() {
 }
 
 function checkCandiNo() {
-
-  let candi = (document.getElementById("candi").value).trim();
-  if (isNaN(candi) || candi < 1) {
-    return false;
-  } else {
-    return true;
-  }
+    let candi = (document.getElementById("candi").value).trim();
+    if (isNaN(candi) & candi < 1) {
+        } else {
+            if (candi > 1 || candi < 10 & candi.length !=0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
-
 function validateForm(){
 	if(!checkSID()){
 	  alert("Invalid value for Student ID!");
